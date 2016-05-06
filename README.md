@@ -7,7 +7,7 @@ a function in R to take nested function calls and convert them to a more readabl
 calling the add-in on:
 
     foo_foo <- little_bunny()
-    bop_on( scooop_up( hop_through(foo_foo_ forest), field_mouse ), head )
+    bop_on( scooop_up( hop_through(foo_foo, forest), field_mouse ), head )
     
 
 will return:
