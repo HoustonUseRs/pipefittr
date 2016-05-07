@@ -2,11 +2,11 @@
 ## [testthat.r]
 ##
 ## author     : Ed Goodwin
-## project    : piperizer
+## project    : pipefittr
 ## createdate : 05.07.2016
 ##
 ## description:
-##    test scaffolding for piperize
+##    test scaffolding for pipefittr
 ##
 ## version: 0.01
 ## changelog:
@@ -15,5 +15,4 @@
 require(testthat)
 require(pipefittr)
 
-## TODO: add "Suggests: testthat to our package DESCRIPTION
 test_check("pipefittr")
