@@ -52,6 +52,10 @@ make_list <- function(string) {
   
 }
 
+
+#' pipefittr
+#'
+#' @param string 
 pipefittr <- function(string) {
   # l <- make_list(string)
   l <- test_list
