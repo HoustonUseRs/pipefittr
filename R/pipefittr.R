@@ -47,6 +47,9 @@ make_output <- function(funclist) {
     output <- paste(output, full_str)
   }
   
+  #remove leading whitespace
+  output <- gsub("^\\s+", "", output)
+  
   output
 }
 
