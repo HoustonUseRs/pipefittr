@@ -4,10 +4,25 @@ Title: Convert nested functions to pipes
 Version: 0.1.0
 Author: HRUG
 Maintainer: HRUG <yourfault@somewhere.net>
+<<<<<<< HEAD
 Description: a function in R to take nested function calls and convert them to a more readable form using magrittr's pipes.
 Imports:
   dplyr
 Suggests: 
   testthat
+=======
+Description: a function in R to take nested function calls and convert them to a
+    more readable form using magrittr's pipes.
+Depends:
+    R (>= 3.0.0)
+Imports:
+    shiny (>= 0.13),
+    miniUI (>= 0.1.1),
+    rstudioapi (>= 0.4)
+Suggests:
+    dplyr,
+    testthat
+>>>>>>> 1337220639c263f01d22575db1dc05823f19cc8b
 License: MIT
 LazyData: TRUE
+RoxygenNote: 5.0.1
