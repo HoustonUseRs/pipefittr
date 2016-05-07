@@ -51,14 +51,12 @@ make_output <- function(funclist) {
 }
 
 make_list <- function(string) {
-  # remove whitespace
   fwd <- string %>% 
     gsub("\\s+", "", .) %>%
     strsplit("\\(")
   
   fwd <- fwd[[1]]
   
-  #pop the back
   bk <- tail(fwd, 1) %>% 
     strsplit("\\)") %>%
     unlist()
@@ -67,7 +65,6 @@ make_list <- function(string) {
   
   #pop the start
   start <- strsplit(bk[[1]][1], ",")[[1]][1]
-  
   bk[1] <- unlist(strsplit(bk[1], ","))[-1]
   
   bk <- gsub("^,", "", bk)
@@ -90,7 +87,7 @@ make_list <- function(string) {
 #'
 #' @param string 
 pipefittr <- function(string) {
-  l <- make_list(string)
-  #l <- test_list
-  make_output(l)
+  string %>%
+  make_list() %>%
+  make_output()
 }
