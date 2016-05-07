@@ -1,4 +1,4 @@
-Package: piperizeorpipefittr
+Package: pipefittr
 Type: Package
 Title: Convert nested functions to pipes
 Version: 0.1.0
