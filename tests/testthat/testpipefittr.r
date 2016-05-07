@@ -13,17 +13,17 @@
 ##
 
 ## test stub...dispose of before commit to repo
-pipefittr = function(string) {
-  pipestring = paste(
-    "foo_foo <- little_bunny()\n",
-    "foo_foo %>%\n",
-    "\thop_through(forest) %>%\n",
-    "\tscoop_up(field_mouse) %>%\n",
-    "\tbop_on(head)",
-    sep = ""
-  )
-  pipestring
-}
+# pipefittr = function(string) {
+#   pipestring = paste(
+#     "foo_foo <- little_bunny()\n",
+#     "foo_foo %>%\n",
+#     "\thop_through(forest) %>%\n",
+#     "\tscoop_up(field_mouse) %>%\n",
+#     "\tbop_on(head)",
+#     sep = ""
+#   )
+#   pipestring
+# }
 
 context("test harness for pipefittr")
 test_that("Simple bunny foo foo convert", {
