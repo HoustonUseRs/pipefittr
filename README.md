@@ -1,4 +1,4 @@
-# piperize_or_pipefittr
+# pipefittr
 
 a function in R to take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
 
