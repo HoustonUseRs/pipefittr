@@ -6,6 +6,11 @@ test_str <- "bop_on(
     field_mouse ),
   head )"
 
+test_str2 <- "select(
+                filter(
+                  read.csv('data.csv', as.is=T)
+                )
+              )"
 # we're assuming we can get here ->
 test_list <- list(bop_on = c(".", "head"), 
                   scoop_up = c(".", "field_mouse"), 
@@ -41,15 +46,43 @@ make_output <- function(funclist) {
     }
     output <- paste(output, full_str)
   }
+  
   output
 }
 
 make_list <- function(string) {
   # remove whitespace
-  string_ns <- gsub("\\s+", "", test_str)
+  fwd <- string %>% 
+    gsub("\\s+", "", .) %>%
+    strsplit("\\(")
+  
+  fwd <- fwd[[1]]
+  
+  #pop the back
+  bk <- tail(fwd, 1) %>% 
+    strsplit("\\)") %>%
+    unlist()
+  
+  fwd <- fwd[-length(fwd)]
+  
+  #pop the start
+  start <- strsplit(bk[[1]][1], ",")[[1]][1]
+  
+  bk[1] <- unlist(strsplit(bk[1], ","))[-1]
+  
+  bk <- gsub("^,", "", bk)
+  
+  l <- as.list(rev(bk))
+  names(l) <- fwd
+  
+  l[] <- strsplit(paste(".", l), " ")
   
   # make list like test_list or test_list2
+  l <- append(l, 0)
+  names(l)[length(l)] <- start
+  l[length(l)] <- list(NULL)
   
+  l
 }
 
 
@@ -57,7 +90,7 @@ make_list <- function(string) {
 #'
 #' @param string 
 pipefittr <- function(string) {
-  # l <- make_list(string)
-  l <- test_list
+  l <- make_list(string)
+  #l <- test_list
   make_output(l)
 }
