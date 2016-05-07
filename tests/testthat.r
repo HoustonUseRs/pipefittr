@@ -7,6 +7,7 @@
 ##
 ## description:
 ##    test scaffolding for pipefittr
+##    run tests with devtools::test() in R console
 ##
 ## version: 0.01
 ## changelog:
