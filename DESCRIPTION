@@ -6,6 +6,8 @@ Author: HRUG
 Maintainer: HRUG <yourfault@somewhere.net>
 Description: a function in R to take nested function calls and
 convert them to a more readable form using magrittr's pipes.
-Suggests: testthat, dplyr
+Suggests: 
+  dplyr,
+  testthat
 License: MIT
 LazyData: TRUE
