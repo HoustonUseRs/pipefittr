@@ -18,6 +18,8 @@ will return:
       scoop_up(field_mouse) 
       %>% bop_on(head)
     
+![](examples/example.gif)
+
 
 ### another example
 
