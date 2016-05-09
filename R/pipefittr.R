@@ -89,6 +89,7 @@ make_list <- function(string) {
 #' pipefittr
 #'
 #' @param string 
+#' @import dplyr
 pipefittr <- function(string) {
   string %>%
   make_list() %>%
