@@ -31,12 +31,14 @@ make_output <- function(funclist) {
     funcname_str <- names(func)
     
     # unpack
-    if (length(func[[1]])) {
+    if (length(func[[1]])) { # if there are arguments
+      
+      # remove . if its the first element
       if(func[[1]][1] == ".") func[[1]] <- func[[1]][-1]
       
       arg_str <- paste(func[[1]], collapse = ", ")
       func_str <- paste0(funcname_str, "(", arg_str, ")")
-    } else {
+    } else { # incase of no arguments
       func_str <- funcname_str
     }
     
@@ -95,8 +97,10 @@ make_list <- function(string) {
 #'
 #' @param string 
 #' @import dplyr
+#' 
+#' @export
 pipefittr <- function(string) {
   string %>%
-  make_list() %>%
-  make_output()
+    make_list() %>%
+    make_output()
 }
