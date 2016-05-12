@@ -2,7 +2,9 @@
 
 a function in R to take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
 
-### e.g. (example taken from [Hadley Wickham](https://github.com/hadley))
+
+## Examples:
+**e.g. (example taken from [Hadley Wickham](https://github.com/hadley))**
 
 calling the add-in on:
 
@@ -21,7 +23,7 @@ will return:
 ![](examples/example.gif)
 
 
-### another example
+**another example**
 
 ostensibly, the (same?) function would also be able to remedy horrendous situations like this:
 
@@ -41,7 +43,13 @@ this would resolve to:
 same as above with the minor difference that it would now be assigned to `tmp_bunny4`. 
 It can be up to the user to change that later.
 
-# some disorganized ideas on how the function could work:
+### installation
+
+```
+devtools::install_github("houstonusers/pipefittr")
+```
+
+### some disorganized ideas on how the function could work:
 
 steps:
 
