@@ -72,7 +72,8 @@ make_list <- function(string) {
   
   #pop the start
   start <- strsplit(bk[[1]][1], ",")[[1]][1]
-  bk[1] <- unlist(strsplit(bk[1], ","))[-1]
+  bk[1] <- ifelse(grepl(",", bk[1]), unlist(strsplit(bk[1], ","))[-1], "")
+  
   
   bk <- gsub("^,", "", bk)
   
