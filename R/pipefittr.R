@@ -60,6 +60,8 @@ make_output <- function(funclist) {
 
 
 make_list <- function(string) {
+  
+  # extract func names
   fwd <- string %>% 
     gsub("\\s+", "", .) %>%
     strsplit("\\(")
@@ -76,7 +78,7 @@ make_list <- function(string) {
   start <- strsplit(bk[[1]][1], ",")[[1]][1]
   bk[1] <- ifelse(grepl(",", bk[1]), unlist(strsplit(bk[1], ","))[-1], "")
   
-  
+  # vector of args
   bk <- gsub("^,", "", bk)
   
   l <- as.list(rev(bk))
