@@ -28,20 +28,18 @@
 context("test harness for pipefittr")
 test_that("Simple bunny foo foo convert", {
   teststring = paste(
-    "foo_foo <- little_bunny()\n",
     "bop_on( scoop_up( hop_through(foo_foo, forest),",
     "field_mouse ), head )",
     sep = ""
   )
   pipestring = paste(
-    "foo_foo <- little_bunny()\n",
     "foo_foo %>%\n",
     "\thop_through(forest) %>%\n",
     "\tscoop_up(field_mouse) %>%\n",
     "\tbop_on(head)",
     sep = ""
   )
-  expect_match(pipestring, pipefittr(teststring))
+  expect_equal(pipefittr(teststring, pretty=T), paste(pipestring))
 })
 
 test_that("Complex bunny foo foo convert",{

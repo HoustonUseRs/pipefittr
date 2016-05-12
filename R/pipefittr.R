@@ -101,8 +101,9 @@ make_list <- function(string) {
 #' @import dplyr
 #' 
 #' @export
-pipefittr <- function(string) {
+pipefittr <- function(string, pretty=F) {
   string %>%
     make_list() %>%
-    make_output()
+    make_output() %>%
+    ifelse(pretty, gsub("%>% ", "%>%\n\t", .), .)
 }
