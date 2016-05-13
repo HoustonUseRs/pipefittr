@@ -83,5 +83,5 @@ pipefittr <- function(string, pretty=F) {
   string %>%
     make_list() %>%
     make_output() %>%
-    ifelse(pretty, gsub("%>% ", "%>%\n\t", .), .)
+    ifelse(pretty, gsub("%>% ", "%>%\n  ", .), .)
 }

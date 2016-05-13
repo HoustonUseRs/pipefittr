@@ -22,9 +22,9 @@ test_that("Simple bunny foo foo convert", {
   )
   pipestring = paste(
     "foo_foo %>%\n",
-    "\thop_through(forest) %>%\n",
-    "\tscoop_up(field_mouse) %>%\n",
-    "\tbop_on(head)",
+    "  hop_through(forest) %>%\n",
+    "  scoop_up(field_mouse) %>%\n",
+    "  bop_on(head)",
     sep = ""
   )
   expect_equal(pipefittr(teststring, pretty=T), paste(pipestring))
@@ -43,8 +43,8 @@ test_that("Complex bunny foo foo convert",{
   pipestring = paste(
     "foo_foo <- little_bunny()\n",
     "tmp_bunny4 <- foo_foo %>%\n", 
-    "\thop_through(forest) %>%\n", 
-    "\tscoop_up(field_mouse) %>%\n",
+    "  hop_through(forest) %>%\n", 
+    "  scoop_up(field_mouse) %>%\n",
     "bop_on(head)",
     sep = ""
   )
