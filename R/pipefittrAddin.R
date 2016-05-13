@@ -8,6 +8,7 @@ pipefittrAddin <- function() {
     miniContentPanel(
       h4("Use pipefittr to reformat code."), 
       hr(),
+      checkboxInput("pretty", "Pretty?", FALSE),
       uiOutput("document", container = rCodeContainer)
     )
   )
@@ -21,12 +22,10 @@ pipefittrAddin <- function() {
     reactiveDocument <- reactive({
       
       # Collect inputs
-      brace.newline <- input$brace.newline
-      indent <- input$indent
-      width <- input$width
+      pretty <- input$pretty
       
       # Build formatted document
-      formatted <- pipefittr(text)
+      formatted <- pipefittr(text, pretty)
       
       formatted
     })

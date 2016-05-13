@@ -4,7 +4,7 @@
 \alias{pipefittr}
 \title{pipefittr}
 \usage{
-pipefittr(string)
+pipefittr(string, pretty = F)
 }
 \arguments{
 \item{string}{}
