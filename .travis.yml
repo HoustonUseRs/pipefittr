@@ -7,7 +7,6 @@ sudo: required
 # travis is really building the pacakge
 
 before_install:
-  - cd ultraseq
   - curl -OL https://raw.githubusercontent.com/metacran/r-builder/master/pkg-build.sh
   - chmod 755 pkg-build.sh
   - ./pkg-build.sh bootstrap
