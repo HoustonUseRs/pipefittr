@@ -1,5 +1,7 @@
 # pipefittr
 
+![](https://travis-ci.org/HoustonUseRs/pipefittr.svg?branch=master)
+
 a function in R to take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
 
 
