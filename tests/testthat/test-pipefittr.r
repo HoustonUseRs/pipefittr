@@ -12,21 +12,9 @@
 ## changelog:
 ##
 
-## test stub...dispose of before commit to repo
-# pipefittr = function(string) {
-#   pipestring = paste(
-#     "foo_foo <- little_bunny()\n",
-#     "foo_foo %>%\n",
-#     "\thop_through(forest) %>%\n",
-#     "\tscoop_up(field_mouse) %>%\n",
-#     "\tbop_on(head)",
-#     sep = ""
-#   )
-#   pipestring
-# }
-
 context("test harness for pipefittr")
 test_that("Simple bunny foo foo convert", {
+  #skip("Format feature not implemented")
   teststring = paste(
     "bop_on( scoop_up( hop_through(foo_foo, forest),",
     "field_mouse ), head )",
@@ -43,6 +31,7 @@ test_that("Simple bunny foo foo convert", {
 })
 
 test_that("Complex bunny foo foo convert",{
+  skip("Format feature not implemented")
   teststring = paste(
     "tmp_bunny1 <- foo_foo\n",
     "tmp_bunny2 <- hop_through(tmp_bunny1, forest)\n",
@@ -59,7 +48,7 @@ test_that("Complex bunny foo foo convert",{
     "bop_on(head)",
     sep = ""
   )
-  expect_match(pipestring, pipefittr(teststring))
+  expect_match(pipestring, pipefittr(teststring, pretty=TRUE))
 })
 
 
