@@ -1,25 +1,3 @@
-# require(dplyr)
-# 
-# test_str <- "bop_on( 
-#   scoop_up( 
-#     hop_through(foo_foo, forest),
-#     field_mouse ),
-#   head )"
-# 
-# test_str2 <- "select(
-#                 filter(
-#                   read.csv('data.csv', as.is=T)
-#                 )
-#               )"
-# # we're assuming we can get here ->
-# test_list <- list(bop_on = c(".", "head"), 
-#                   scoop_up = c(".", "field_mouse"), 
-#                   hop_through = c(".", "forest"), 
-#                   foo_foo = NULL)
-# 
-# test_list2 <- list(summarise = c(".", "m = mean(wt)"), 
-#                    filter = c(".", "mpg > 20"), 
-#                    mtcars = NULL)
 
 make_output <- function(funclist) {
   output = ""
@@ -86,7 +64,7 @@ make_list <- function(string) {
   
   l[] <- strsplit(paste(".", l), " ")
   
-  # make list like test_list or test_list2
+  # make list 
   l <- append(l, 0)
   names(l)[length(l)] <- start
   l[length(l)] <- list(NULL)
