@@ -37,7 +37,7 @@ unpackstr = function(atom) {
   atoms
 }
 
-multistrdf = data.frame(funchead=c("tmp_bunny1", 
+multistrdfex = data.frame(funchead=c("tmp_bunny1", 
                                "tmp_bunny2", 
                                "tmp_bunny3", 
                                "tmp_bunny4"), 
@@ -47,22 +47,26 @@ multistrdf = data.frame(funchead=c("tmp_bunny1",
                                "bop_on(tmp_bunny3, head)"))
 
 
-pipestr = paste0(multistrdf$funchead[nrow(multistrdf)], " = ")
-
-
-for (i in 1:length(multistrdf$functail)) {
-  if (i == 1) {
-    pipestr = paste0(pipestr, as.character(multistrdf$functail[i]))
+multipipefittr = function(multistrdf) {
+  pipestr = paste0(multistrdf$funchead[nrow(multistrdf)], " = ")
+  
+  
+  for (i in 1:length(multistrdf$functail)) {
+    if (i == 1) {
+      pipestr = paste0(pipestr, as.character(multistrdf$functail[i]))
+    }
+    else {
+      funccall = as.character(multistrdf$functail[i])
+      atomlist = unpackstr(funccall)
+      funcname = names(atomlist)[1]
+      argsname = paste(atomlist[[1]], collapse = ", ")
+      
+      pipestr = paste0(pipestr, " %>% ", funcname, "(", argsname, ")")
+    }
+    i = i + 1
   }
-  else {
-    funccall = as.character(multistrdf$functail[i])
-    atomlist = unpackstr(funccall)
-    funcname = names(atomlist)[1]
-    argsname = paste(atomlist[[1]], collapse = ", ")
-    
-    pipestr = paste0(pipestr, " %>% ", funcname, "(", argsname, ")")
-  }
-  i = i+1
+  
+  pipestr
 }
 
-pipestr
+multipipefittr(multistrdfex)
