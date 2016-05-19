@@ -37,16 +37,6 @@ unpackstr = function(atom) {
   atoms
 }
 
-multistrdfex = data.frame(funchead=c("tmp_bunny1", 
-                               "tmp_bunny2", 
-                               "tmp_bunny3", 
-                               "tmp_bunny4"), 
-                        functail=c("foo_foo()", 
-                               "hop_through(tmp_bunny1, forest)", 
-                               "scoop_up(tmp_bunny2, field_mouse)",
-                               "bop_on(tmp_bunny3, head)"))
-
-
 multipipefittr = function(multistrdf) {
   pipestr = paste0(multistrdf$funchead[nrow(multistrdf)], " = ")
   
@@ -69,4 +59,14 @@ multipipefittr = function(multistrdf) {
   pipestr
 }
 
+
+## Example
+multistrdfex = data.frame(funchead=c("tmp_bunny1", 
+                                     "tmp_bunny2", 
+                                     "tmp_bunny3", 
+                                     "tmp_bunny4"), 
+                          functail=c("foo_foo()", 
+                                     "hop_through(tmp_bunny1, forest)", 
+                                     "scoop_up(tmp_bunny2, field_mouse)",
+                                     "bop_on(tmp_bunny3, head)"))
 multipipefittr(multistrdfex)
