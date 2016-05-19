@@ -40,7 +40,6 @@ unpackstr = function(atom) {
 multipipefittr = function(multistrdf) {
   pipestr = paste0(multistrdf$funchead[nrow(multistrdf)], " = ")
   
-  
   for (i in 1:length(multistrdf$functail)) {
     if (i == 1) {
       pipestr = paste0(pipestr, as.character(multistrdf$functail[i]))
