@@ -25,8 +25,9 @@
 
 ## NOT WORKING YET...NEED TO PARSE CODE STRING INTO DATAFRAME
 
-require(dplyr)
-require(pipefittr)
+# comment out, since this breaks pkg building
+#require(dplyr)
+#require(pipefittr)
 
 unpackstr = function(atom) {
   if(is.character(atom) == FALSE)
@@ -58,7 +59,6 @@ multipipefittr = function(multistrdf) {
   pipestr
 }
 
-
 ## Example
 multistrdfex = data.frame(funchead=c("tmp_bunny1", 
                                      "tmp_bunny2", 
@@ -69,3 +69,4 @@ multistrdfex = data.frame(funchead=c("tmp_bunny1",
                                      "scoop_up(tmp_bunny2, field_mouse)",
                                      "bop_on(tmp_bunny3, head)"))
 multipipefittr(multistrdfex)
+
