@@ -41,6 +41,8 @@ unpackstr = function(atom) {
 multipipefittr = function(multistrdf) {
   pipestr = paste0(multistrdf$funchead[nrow(multistrdf)], " = ")
   
+  # remove . if its the first element
+
   for (i in 1:length(multistrdf$functail)) {
     if (i == 1) {
       pipestr = paste0(pipestr, as.character(multistrdf$functail[i]))
@@ -49,6 +51,9 @@ multipipefittr = function(multistrdf) {
       funccall = as.character(multistrdf$functail[i])
       atomlist = unpackstr(funccall)
       funcname = names(atomlist)[1]
+
+      # removing first .
+      if(atomlist[[1]][1] == ".") atomlist[[1]] <- atomlist[[1]][-1]
       argsname = paste(atomlist[[1]], collapse = ", ")
       
       pipestr = paste0(pipestr, " %>% ", funcname, "(", argsname, ")")
@@ -63,16 +68,36 @@ multipipefittr = function(multistrdf) {
 if(FALSE){
   # wrapping example, into a non-runnable block. 
   # pkg build fails.
+  
+  require(dplyr)
+  require(pipefittr)
+  
   ## Example
   multistrdfex = data.frame(funchead=c("tmp_bunny1", 
                                        "tmp_bunny2", 
                                        "tmp_bunny3", 
                                        "tmp_bunny4"), 
-                            functail=c("foo_foo()", 
+                            functail=c("foo_foo(dummy_df)", 
                                        "hop_through(tmp_bunny1, forest)", 
                                        "scoop_up(tmp_bunny2, field_mouse)",
                                        "bop_on(tmp_bunny3, head)"))
   multipipefittr(multistrdfex)
+
+  # Example, with nesting and multi-line breaks!
+  multistrdfex = data.frame(funchead=c("tmp_bunny1", 
+                                       "tmp_bunny2", 
+                                       "tmp_bunny3", 
+                                       "tmp_bunny4"), 
+                            functail=c("foo_foo(dummy_df)", 
+                                       "hop_through(tmp_bunny1, forest)", 
+                                       "scoop_up(tmp_bunny2, log(field_mouse))",
+                                       "bop_on(tmp_bunny3, head)"))
+  multipipefittr(multistrdfex)
+  # we get
+  # "tmp_bunny4 = foo_foo(dummy_df) %>% hop_through(forest) %>% scoop_up() %>% bop_on(head)"
+  # shoud be:
+  # "tmp_bunny4 = foo_foo(dummy_df) %>% hop_through(forest) %>% scoop_up(log(field_mouse)) %>% bop_on(head)"
+  
   
 }
 
