@@ -59,14 +59,20 @@ multipipefittr = function(multistrdf) {
   pipestr
 }
 
-## Example
-multistrdfex = data.frame(funchead=c("tmp_bunny1", 
-                                     "tmp_bunny2", 
-                                     "tmp_bunny3", 
-                                     "tmp_bunny4"), 
-                          functail=c("foo_foo()", 
-                                     "hop_through(tmp_bunny1, forest)", 
-                                     "scoop_up(tmp_bunny2, field_mouse)",
-                                     "bop_on(tmp_bunny3, head)"))
-multipipefittr(multistrdfex)
+
+if(FALSE){
+  # wrapping example, into a non-runnable block. 
+  # pkg build fails.
+  ## Example
+  multistrdfex = data.frame(funchead=c("tmp_bunny1", 
+                                       "tmp_bunny2", 
+                                       "tmp_bunny3", 
+                                       "tmp_bunny4"), 
+                            functail=c("foo_foo()", 
+                                       "hop_through(tmp_bunny1, forest)", 
+                                       "scoop_up(tmp_bunny2, field_mouse)",
+                                       "bop_on(tmp_bunny3, head)"))
+  multipipefittr(multistrdfex)
+  
+}
 
