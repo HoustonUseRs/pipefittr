@@ -25,9 +25,22 @@
 
 ## NOT WORKING YET...NEED TO PARSE CODE STRING INTO DATAFRAME
 
-# comment out, since this breaks pkg building
-#require(dplyr)
-#require(pipefittr)
+
+splitmultistrtolist = function(stringtosplit) {
+  strlist = str_split(stringtosplit, "\n")  
+  strlist
+}
+
+splitlisttodf = function(listtosplit) {
+  atomsdf = data.frame()
+  for(line in listtosplit[[1]]) {
+    atoms = str_split_fixed(line, "<-|\\=", 2)
+    convdf = data.frame(funchead = atoms[1],
+                        functail = atoms[2])
+    atomsdf = rbind(atomsdf, convdf)
+  }
+  atomsdf
+}
 
 unpackstr = function(atom) {
   if(is.character(atom) == FALSE)
@@ -71,6 +84,7 @@ if(FALSE){
   
   require(dplyr)
   require(pipefittr)
+  require(stringr)
   
   ## Example
   multistrdfex = data.frame(funchead=c("tmp_bunny1", 
@@ -100,4 +114,5 @@ if(FALSE){
   
   
 }
+
 
