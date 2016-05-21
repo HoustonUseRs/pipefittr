@@ -24,6 +24,8 @@ notifications:
   email:
     on_success: change
     on_failure: change
+  slack: 
+    hrug:cCFFPSuKEkld9WUDvRmaoRAt
 
 env:
   matrix:
