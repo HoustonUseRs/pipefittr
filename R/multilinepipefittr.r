@@ -23,9 +23,6 @@
 #   scoop_up(field_mouse) 
 # %>% bop_on(head)
 
-## NOT WORKING YET...NEED TO PARSE CODE STRING INTO DATAFRAME
-
-
 splitmultistrtolist = function(stringtosplit) {
   strlist = str_split(stringtosplit, "\n")  
   strlist
@@ -111,8 +108,6 @@ if(FALSE){
   # "tmp_bunny4 = foo_foo(dummy_df) %>% hop_through(forest) %>% scoop_up() %>% bop_on(head)"
   # shoud be:
   # "tmp_bunny4 = foo_foo(dummy_df) %>% hop_through(forest) %>% scoop_up(log(field_mouse)) %>% bop_on(head)"
-  
-  
 }
 
 
