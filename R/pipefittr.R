@@ -83,6 +83,8 @@ pipefittr <- function(string, pretty=F) {
   ## some comment 1
   ## some comment 2
   ## some comment 3
+  ## some comment
+
   string %>%
     make_list() %>%
     make_output() %>%
