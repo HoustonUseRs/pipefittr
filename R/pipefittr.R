@@ -80,6 +80,7 @@ make_list <- function(string) {
 #' 
 #' @export
 pipefittr <- function(string, pretty=F) {
+  ## some comment
   string %>%
     make_list() %>%
     make_output() %>%
