@@ -13,7 +13,7 @@
 ## changelog:
 ##
 
-require(testthat)
-require(pipefittr)
+library(testthat)
+library(pipefittr)
 
 test_check("pipefittr")
