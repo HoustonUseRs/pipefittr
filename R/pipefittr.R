@@ -77,11 +77,21 @@ make_list <- function(string) {
 #'
 #' @param string 
 #' @import dplyr
+#' @import stringr
 #' 
 #' @export
 pipefittr <- function(string, pretty=F) {
-  string %>%
-    make_list() %>%
-    make_output() %>%
-    ifelse(pretty, gsub("%>% ", "%>%\n  ", .), .)
+  if (stringr::str_count(string, "\n") > 1L) {
+    string %>%
+      splitmultistrtolist() %>%
+      splitlisttodf() %>%
+      multipipefittr() %>%
+      ifelse(pretty, gsub("%>% ", "%>%\n  ", .), .)
+  } else {
+    string %>%
+      make_list() %>%
+      make_output() %>%
+      ifelse(pretty, gsub("%>% ", "%>%\n  ", .), .)
+  }
 }
+
