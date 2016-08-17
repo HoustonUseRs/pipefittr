@@ -10,6 +10,8 @@
 pop <- function(vec) {
   newvec <- vec[-length(vec)]
   vecname <- deparse(substitute(vec))
-  assign(vecname, newvec, envir = .GlobalEnv)
+  
+  # this does seem to be used in the pkg.
+  # assign(vecname, newvec, envir = .GlobalEnv)
   tail(vec, 1) 
 }
