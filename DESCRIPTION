@@ -12,8 +12,9 @@ Imports:
     miniUI (>= 0.1.1),
     rstudioapi (>= 0.4),
     shiny (>= 0.13),
+    stringr
 Suggests:
     testthat
-License: MIT
+License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
