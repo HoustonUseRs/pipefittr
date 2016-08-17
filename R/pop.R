@@ -3,7 +3,7 @@
 #' a pop function that behaves like .pop() in
 #' python or javascript
 #'
-#' @param funclist 
+#' @param vec a vector, from which last variable is extracted
 #'
 #' @importFrom utils tail
 #'

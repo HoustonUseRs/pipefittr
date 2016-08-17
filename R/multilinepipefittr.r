@@ -25,7 +25,7 @@
 
 #' Splits string into a list
 #'
-#' @param listtosplit 
+#' @param stringtosplit a string to be split 
 #'
 #' @importFrom stringr str_split
 #' 
@@ -36,7 +36,7 @@ splitmultistrtolist = function(stringtosplit) {
 
 #' Splits list into a data.frame
 #'
-#' @param listtosplit 
+#' @param listtosplit a list to be converted into a data.frame
 #'
 #' @importFrom stringr str_split_fixed
 #'

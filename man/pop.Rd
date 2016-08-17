@@ -7,7 +7,7 @@
 pop(vec)
 }
 \arguments{
-\item{funclist}{}
+\item{vec}{a vector, from which last variable is extracted}
 }
 \description{
 a pop function that behaves like .pop() in

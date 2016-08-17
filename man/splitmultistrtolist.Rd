@@ -7,7 +7,7 @@
 splitmultistrtolist(stringtosplit)
 }
 \arguments{
-\item{listtosplit}{}
+\item{stringtosplit}{a string to be split}
 }
 \description{
 Splits string into a list

@@ -7,7 +7,9 @@
 pipefittr(string, pretty = F)
 }
 \arguments{
-\item{string}{}
+\item{string}{a string, to be converted into \code{magrittr}'s pipe syntax}
+
+\item{pretty}{}
 }
 \description{
 pipefittr

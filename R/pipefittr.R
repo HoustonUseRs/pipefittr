@@ -47,7 +47,7 @@ make_output <- function(funclist) {
 
 #' make_list
 #'
-#' @param funclist 
+#' @param string 
 #'
 #' @importFrom utils tail
 #'
@@ -89,8 +89,10 @@ make_list <- function(string) {
 
 #' pipefittr
 #'
-#' @param string 
-#' @import dplyr
+#' @param string a string, to be converted into \code{magrittr}'s pipe syntax
+#' @param pretty
+#' 
+#' @import magrittr
 #' 
 #' @export
 pipefittr <- function(string, pretty=F) {

@@ -7,7 +7,7 @@
 splitlisttodf(listtosplit)
 }
 \arguments{
-\item{listtosplit}{}
+\item{listtosplit}{a list to be converted into a data.frame}
 }
 \description{
 Splits list into a data.frame

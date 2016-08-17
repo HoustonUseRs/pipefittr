@@ -7,7 +7,7 @@
 make_list(string)
 }
 \arguments{
-\item{funclist}{}
+\item{string}{}
 }
 \description{
 make_list
