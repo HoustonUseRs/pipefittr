@@ -1,6 +1,6 @@
 # pipefittr
 
-[![](https://travis-ci.org/HoustonUseRs/pipefittr.svg?branch=master)](https://travis-ci.org/HoustonUseRs/pipefittr/jobs/131320732)
+[![](https://travis-ci.org/HoustonUseRs/pipefittr.svg?branch=master)](https://travis-ci.org/HoustonUseRs/pipefittr)
 
 
 a function in R to take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
