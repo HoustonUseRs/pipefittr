@@ -8,7 +8,7 @@ Description: a function in R to take nested function calls and convert them to a
 Depends:
     R (>= 3.0.0)
 Imports:
-    dplyr,
+    magrittr,
     miniUI (>= 0.1.1),
     rstudioapi (>= 0.4),
     shiny (>= 0.13),
