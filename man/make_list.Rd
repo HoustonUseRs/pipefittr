@@ -7,7 +7,7 @@
 make_list(string)
 }
 \arguments{
-\item{string}{}
+\item{string}{a string to be converted into a list}
 }
 \description{
 make_list

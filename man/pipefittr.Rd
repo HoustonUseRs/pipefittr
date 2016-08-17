@@ -9,7 +9,7 @@ pipefittr(string, pretty = F)
 \arguments{
 \item{string}{a string, to be converted into \code{magrittr}'s pipe syntax}
 
-\item{pretty}{}
+\item{pretty}{create a multiline output, which is prettier. Try this.}
 }
 \description{
 pipefittr

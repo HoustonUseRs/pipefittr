@@ -7,7 +7,7 @@
 make_output(funclist)
 }
 \arguments{
-\item{funclist}{}
+\item{funclist}{a list of functions}
 }
 \description{
 make_output

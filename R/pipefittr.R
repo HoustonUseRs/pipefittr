@@ -3,7 +3,7 @@ globalVariables(".")
 
 #' make_output
 #'
-#' @param funclist 
+#' @param funclist a list of functions
 #'
 #' @importFrom utils tail
 #'
@@ -47,7 +47,7 @@ make_output <- function(funclist) {
 
 #' make_list
 #'
-#' @param string 
+#' @param string a string to be converted into a list
 #'
 #' @importFrom utils tail
 #'
@@ -90,7 +90,7 @@ make_list <- function(string) {
 #' pipefittr
 #'
 #' @param string a string, to be converted into \code{magrittr}'s pipe syntax
-#' @param pretty
+#' @param pretty create a multiline output, which is prettier. Try this.
 #' 
 #' @import magrittr
 #' 
