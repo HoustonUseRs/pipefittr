@@ -1,4 +1,5 @@
 
+globalVariables(".")
 
 #' make_output
 #'
