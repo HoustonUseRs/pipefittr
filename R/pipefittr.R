@@ -1,4 +1,11 @@
 
+
+#' make_output
+#'
+#' @param funclist 
+#'
+#' @importFrom utils tail
+#'
 make_output <- function(funclist) {
   output = ""
   
@@ -37,6 +44,12 @@ make_output <- function(funclist) {
 }
 
 
+#' make_list
+#'
+#' @param funclist 
+#'
+#' @importFrom utils tail
+#'
 make_list <- function(string) {
   
   # extract func names

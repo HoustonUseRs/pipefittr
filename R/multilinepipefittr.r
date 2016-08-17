@@ -23,11 +23,23 @@
 #   scoop_up(field_mouse) 
 # %>% bop_on(head)
 
+#' Splits string into a list
+#'
+#' @param listtosplit 
+#'
+#' @importFrom stringr str_split
+#' 
 splitmultistrtolist = function(stringtosplit) {
   strlist = str_split(stringtosplit, "\n")  
   strlist
 }
 
+#' Splits list into a data.frame
+#'
+#' @param listtosplit 
+#'
+#' @importFrom stringr str_split_fixed
+#'
 splitlisttodf = function(listtosplit) {
   atomsdf = data.frame()
   for(line in listtosplit[[1]]) {
