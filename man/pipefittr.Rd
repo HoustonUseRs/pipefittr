@@ -2,7 +2,7 @@
 % Please edit documentation in R/pipefittr.R
 \name{pipefittr}
 \alias{pipefittr}
-\title{pipefittr}
+\title{Convert nested calls to magrittr's pipes.}
 \usage{
 pipefittr(string, pretty = F)
 }
@@ -12,7 +12,7 @@ pipefittr(string, pretty = F)
 \item{pretty}{create a multiline output, which is prettier. Try this.}
 }
 \description{
-pipefittr
+To take nested function calls and convert them to a more readable form using magrittr's pipes.
 }
 \examples{
 teststring = "jump_on(bop_on( scoop_up( hop_through(foo_foo, forest), field_mouse ), head))"

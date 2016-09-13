@@ -26,7 +26,19 @@ will return:
 ![](examples/example.gif)
 
 
-**another example**
+### installation
+
+```
+# install a dev version using
+devtools::install_github("houstonusers/pipefittr")
+```
+
+This should automatically install a Rstudio add-in as well.
+
+
+### to do
+
+**another example** which does **not** work currently
 
 ostensibly, the (same?) function would also be able to remedy horrendous situations like this:
 
@@ -46,12 +58,6 @@ this would resolve to:
 same as above with the minor difference that it would now be assigned to `tmp_bunny4`. 
 It can be up to the user to change that later.
 
-### installation
-
-```
-# install a dev version using
-devtools::install_github("houstonusers/pipefittr")
-```
 
 <!--
 ### some disorganized ideas on how the function could work:

@@ -87,7 +87,9 @@ make_list <- function(string) {
 }
 
 
-#' pipefittr
+#' Convert nested calls to magrittr's pipes.
+#' 
+#' To take nested function calls and convert them to a more readable form using magrittr's pipes.
 #'
 #' @param string a string, to be converted into \code{magrittr}'s pipe syntax
 #' @param pretty create a multiline output, which is prettier. Try this.
