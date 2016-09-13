@@ -3,7 +3,7 @@
 [![](https://travis-ci.org/HoustonUseRs/pipefittr.svg?branch=master)](https://travis-ci.org/HoustonUseRs/pipefittr)
 
 
-a function in R to take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
+To take nested function calls and convert them to a more readable form using [magrittr](https://github.com/smbache/magrittr)'s pipes.
 
 
 ## Examples:
@@ -49,9 +49,11 @@ It can be up to the user to change that later.
 ### installation
 
 ```
+# install a dev version using
 devtools::install_github("houstonusers/pipefittr")
 ```
 
+<!--
 ### some disorganized ideas on how the function could work:
 
 steps:
@@ -59,3 +61,4 @@ steps:
 1. collapse all new-lines within parentheses
 2. parse the order of operations
 3. construct and return the pipe
+-->

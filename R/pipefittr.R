@@ -94,10 +94,17 @@ make_list <- function(string) {
 #' 
 #' @import magrittr
 #' 
+#' @examples
+#' teststring = "jump_on(bop_on( scoop_up( hop_through(foo_foo, forest), field_mouse ), head))"
+#' pipefittr(teststring, pretty = TRUE)
+#'   
+#' 
 #' @export
 pipefittr <- function(string, pretty=F) {
-  string %>%
+  out_string <- string %>%
     make_list() %>%
     make_output() %>%
     ifelse(pretty, gsub("%>% ", "%>%\n  ", .), .)
+  cat(out_string)
+  invisible(out_string)
 }

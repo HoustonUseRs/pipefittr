@@ -14,4 +14,10 @@ pipefittr(string, pretty = F)
 \description{
 pipefittr
 }
+\examples{
+teststring = "jump_on(bop_on( scoop_up( hop_through(foo_foo, forest), field_mouse ), head))"
+pipefittr(teststring, pretty = TRUE)
+  
+
+}
 
