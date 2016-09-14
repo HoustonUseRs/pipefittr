@@ -23,7 +23,7 @@ will return:
       scoop_up(field_mouse) 
       %>% bop_on(head)
     
-![](examples/example.gif)
+![](https://raw.githubusercontent.com/HoustonUseRs/pipefittr/master/examples/example.gif)
 
 
 ### installation
