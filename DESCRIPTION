@@ -1,10 +1,14 @@
 Package: pipefittr
 Type: Package
 Title: Convert Nested Functions to Pipes
-Version: 0.1.0
-Author: Houston R Users
-Maintainer: Houston R Users <houstonrusers@gmail.comt>
-Description: To take nested function calls and convert them to a more readable form using magrittr's pipes.
+Version: 0.1.2
+Author: Houston R Users, 
+  Neeraj Tandon, 
+  Ed Goodwin, 
+  Ju Yeong Kim,
+  Sahil Seth
+Maintainer: Sahil Seth <me@sahilseth.com>
+Description: To take nested function calls and convert them to a more readable form using pipes from package 'magrittr'.
 Depends:
     R (>= 3.0.0)
 Imports:
@@ -15,6 +19,8 @@ Imports:
     stringr
 Suggests:
     testthat
+URL: https://github.com/houstonusers/pipefittr
+BugReports: https://github.com/houstonusers/pipefittr/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 RoxygenNote: 5.0.1
