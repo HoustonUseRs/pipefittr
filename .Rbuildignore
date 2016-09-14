@@ -3,3 +3,6 @@
 .travis.yml
 examples
 cran-comments.md
+misc/*
+pipefittr_pkg_ref.pdf
+

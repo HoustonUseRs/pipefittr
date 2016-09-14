@@ -28,6 +28,7 @@
 #' @param stringtosplit a string to be split 
 #'
 #' @importFrom stringr str_split
+#' @keywords internal
 #' 
 splitmultistrtolist = function(stringtosplit) {
   strlist = str_split(stringtosplit, "\n")  
@@ -39,6 +40,7 @@ splitmultistrtolist = function(stringtosplit) {
 #' @param listtosplit a list to be converted into a data.frame
 #'
 #' @importFrom stringr str_split_fixed
+#' @keywords internal
 #'
 splitlisttodf = function(listtosplit) {
   atomsdf = data.frame()

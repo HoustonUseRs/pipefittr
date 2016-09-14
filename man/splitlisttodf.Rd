@@ -12,4 +12,5 @@ splitlisttodf(listtosplit)
 \description{
 Splits list into a data.frame
 }
+\keyword{internal}
 

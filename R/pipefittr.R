@@ -2,7 +2,9 @@
 globalVariables(".")
 
 #' make_output
-#'
+#' 
+#' @keywords internal
+#' 
 #' @param funclist a list of functions
 #'
 #' @importFrom utils tail
@@ -46,7 +48,8 @@ make_output <- function(funclist) {
 
 
 #' make_list
-#'
+#' @keywords internal
+#' 
 #' @param string a string to be converted into a list
 #'
 #' @importFrom utils tail

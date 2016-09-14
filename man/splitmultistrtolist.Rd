@@ -12,4 +12,5 @@ splitmultistrtolist(stringtosplit)
 \description{
 Splits string into a list
 }
+\keyword{internal}
 
