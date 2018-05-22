@@ -1,6 +1,3 @@
-# https://docs.travis-ci.com/user/languages/r/
-
-
 language: r
 cache: packages
 
@@ -10,7 +7,7 @@ r:
   - release
   - devel
  
- repos:
+repos:
   CRAN: https://cloud.r-project.org
   ropensci: http://packages.ropensci.org
 
@@ -20,3 +17,7 @@ notifications:
     on_failure: change
   slack: 
     hrug:cCFFPSuKEkld9WUDvRmaoRAt
+
+# https://docs.travis-ci.com/user/languages/r/
+
+
