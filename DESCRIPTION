@@ -1,7 +1,7 @@
 Package: pipefittr
 Type: Package
 Title: Convert Nested Functions to Pipes
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person("Houston R Users", role = "cph"),
     person("Neeraj", "Tandon", role = "aut"),
